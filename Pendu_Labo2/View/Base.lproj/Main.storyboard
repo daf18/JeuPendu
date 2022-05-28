@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vl8-Sw-sJB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Balham.otf">
+            <string>Balham</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Dictionnaire-->
+        <scene sceneID="ux0-2g-ICz">
+            <objects>
+                <navigationController id="rft-mI-24h" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Dictionnaire" id="e5K-bI-bI9">
+                        <imageReference key="image" image="character.book.closed.fill.th" catalog="system" symbolScale="large"/>
+                        <color key="badgeColor" red="0.72702389960000002" green="0.85223251580000003" blue="0.90126675369999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Vn0-wd-Q9I">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.72702389960000002" green="0.85223251580000003" blue="0.90126675369999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.72702389960000002" green="0.85223251580000003" blue="0.90126675369999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.72702389960000002" green="0.85223251580000003" blue="0.90126675369999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <navigationBarAppearance key="standardAppearance">
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" red="0.72702389960000002" green="0.85223251580000003" blue="0.90126675369999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textShadowColor" red="0.72702389960000002" green="0.85223251580000003" blue="0.90126675369999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </textAttributes>
+                        </navigationBarAppearance>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" red="0.93844944239999994" green="0.72504788639999995" blue="0.7803555727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" red="0.72702389960000002" green="0.85223251580000003" blue="0.90126675369999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </textAttributes>
+                        </navigationBarAppearance>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1lF-V7-6Sk" kind="relationship" relationship="rootViewController" id="krf-dt-QKx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dw5-wE-d40" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1994" y="532"/>
+        </scene>
+        <!--Dictionnaire-->
+        <scene sceneID="2fS-j3-sly">
+            <objects>
+                <viewController id="1lF-V7-6Sk" customClass="DictionnaireViewController" customModule="Pendu_Labo2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cOx-FZ-7pc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1D-OR-9Wl">
+                                <rect key="frame" x="107" y="550" width="200.5" height="45"/>
+                                <color key="backgroundColor" red="0.5728077292" green="0.62619441750000004" blue="0.78060215710000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="ZQF-73-NnN"/>
+                                    <constraint firstAttribute="width" constant="200.5" id="rXw-s1-gVA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="28"/>
+                                <color key="tintColor" red="0.5728077292" green="0.62619441750000004" blue="0.78060215710000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="COMMENCER">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Lwl-XR-o7o" kind="show" id="ecW-Dr-1Ne"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Screen_Shot_2022-05-25_at_9.45.08_PM-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="Mkd-aI-eaC">
+                                <rect key="frame" x="91" y="80" width="232" height="261"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Mkd-aI-eaC" secondAttribute="height" multiplier="8:9" id="YaA-z4-7Cj"/>
+                                    <constraint firstAttribute="width" constant="232" id="jnn-df-OR2"/>
+                                    <constraint firstAttribute="height" constant="261" id="zot-8A-cmZ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cIN-fG-7An"/>
+                        <color key="backgroundColor" red="0.93844944239999994" green="0.72504788639999995" blue="0.7803555727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Mkd-aI-eaC" firstAttribute="top" secondItem="cIN-fG-7An" secondAttribute="top" constant="80" id="076-Xb-mcW"/>
+                            <constraint firstItem="Mkd-aI-eaC" firstAttribute="centerX" secondItem="cOx-FZ-7pc" secondAttribute="centerX" id="FwP-Fp-euB"/>
+                            <constraint firstItem="cIN-fG-7An" firstAttribute="bottom" secondItem="n1D-OR-9Wl" secondAttribute="bottom" constant="130" id="MNP-p8-fgR"/>
+                            <constraint firstItem="n1D-OR-9Wl" firstAttribute="centerX" secondItem="cOx-FZ-7pc" secondAttribute="centerX" id="Xdd-cy-hUg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Dictionnaire" id="1QJ-Rj-moi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ih1-KH-kC4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1065.217391304348" y="531.69642857142856"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="2QD-bS-lpx">
+            <objects>
+                <tabBarController id="Vl8-Sw-sJB" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KK2-SD-qIF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.5728077292" green="0.62619441750000004" blue="0.78060215710000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.5728077292" green="0.62619441750000004" blue="0.78060215710000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="rft-mI-24h" kind="relationship" relationship="viewControllers" id="xol-o6-qvo"/>
+                        <segue destination="Ml7-Rg-a7t" kind="relationship" relationship="viewControllers" id="7AP-Cf-bhY"/>
+                        <segue destination="urj-V5-mPS" kind="relationship" relationship="viewControllers" id="usd-2R-eBL"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wHI-vy-le0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3484" y="1501"/>
+        </scene>
+        <!--Film-->
+        <scene sceneID="sVc-PA-yWh">
+            <objects>
+                <navigationController id="Ml7-Rg-a7t" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Film" id="3qO-zu-BZm">
+                        <imageReference key="image" image="film.fill" catalog="system" symbolScale="large"/>
+                        <color key="badgeColor" red="0.72702389960000002" green="0.85223251580000003" blue="0.90126675369999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pcN-Ge-76H">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" red="0.53394293790000003" green="0.4389392734" blue="0.63587206600000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" red="0.72702389960000002" green="0.85223251580000003" blue="0.90126675369999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </textAttributes>
+                        </navigationBarAppearance>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" red="0.53394293790000003" green="0.4389392734" blue="0.63587206600000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" red="0.72702389960000002" green="0.85223251580000003" blue="0.90126675369999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </textAttributes>
+                        </navigationBarAppearance>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="iuU-wL-Mc1" kind="relationship" relationship="rootViewController" id="CTX-cl-Kqj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UBG-Nk-1AW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2014" y="1288"/>
+        </scene>
+        <!--Film-->
+        <scene sceneID="fw9-g7-1OX">
+            <objects>
+                <viewController id="iuU-wL-Mc1" customClass="FilmViewController" customModule="Pendu_Labo2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7tg-i4-fKF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="film-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="yuV-FX-h7f">
+                                <rect key="frame" x="82" y="224" width="250" height="250"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jgg-ge-bhk">
+                                <rect key="frame" x="107" y="638" width="200.5" height="45"/>
+                                <color key="backgroundColor" red="0.5728077292" green="0.62619441750000004" blue="0.78060215710000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="FBK-lp-SUp"/>
+                                    <constraint firstAttribute="width" constant="200.5" id="XfB-da-Xaz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="28"/>
+                                <color key="tintColor" red="0.5728077292" green="0.62619441750000004" blue="0.78060215710000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="COMMENCER">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="CwI-P4-YRl" kind="show" id="2u0-99-oVc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aOH-t5-l8e"/>
+                        <color key="backgroundColor" red="0.53394293790000003" green="0.4389392734" blue="0.63587206600000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Jgg-ge-bhk" firstAttribute="centerX" secondItem="7tg-i4-fKF" secondAttribute="centerX" id="Xq0-aX-tkL"/>
+                            <constraint firstItem="yuV-FX-h7f" firstAttribute="centerY" secondItem="7tg-i4-fKF" secondAttribute="centerY" constant="-99" id="o0D-LC-JhB"/>
+                            <constraint firstItem="aOH-t5-l8e" firstAttribute="bottom" secondItem="Jgg-ge-bhk" secondAttribute="bottom" constant="130" id="oTC-fl-UnL"/>
+                            <constraint firstItem="yuV-FX-h7f" firstAttribute="centerX" secondItem="7tg-i4-fKF" secondAttribute="centerX" id="vCE-Qg-R7d"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Film" id="4la-Bw-SRL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lz7-RP-ND7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1065" y="1288"/>
+        </scene>
+        <!--Stats-->
+        <scene sceneID="0fZ-wQ-6l0">
+            <objects>
+                <navigationController title="Stats" id="urj-V5-mPS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Stats" id="ffj-XL-jui">
+                        <imageReference key="image" image="gamecontroller.fill" catalog="system" symbolScale="large"/>
+                        <color key="badgeColor" red="0.72702389960000002" green="0.85223251580000003" blue="0.90126675369999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="v01-pd-Xdn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="standardAppearance">
+                            <textAttributes key="titleTextAttributes"/>
+                        </navigationBarAppearance>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" red="0.64834845070000002" green="0.42557656760000001" blue="0.62004619839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <textAttributes key="titleTextAttributes">
+                                <color key="textColor" red="0.64834845070000002" green="0.42557656760000001" blue="0.62004619839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </textAttributes>
+                        </navigationBarAppearance>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="etK-b4-0O0" kind="relationship" relationship="rootViewController" id="Ouj-UB-2eI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TKc-cw-zzs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1994" y="2405"/>
+        </scene>
+        <!--Stats-->
+        <scene sceneID="sVu-5v-m36">
+            <objects>
+                <viewController id="etK-b4-0O0" customClass="StatsViewController" customModule="Pendu_Labo2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AuP-Mb-cGJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86j-oW-k8K">
+                                <rect key="frame" x="66.5" y="592" width="281" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="281" id="0eY-XP-lUH"/>
+                                    <constraint firstAttribute="width" secondItem="86j-oW-k8K" secondAttribute="height" multiplier="281:110" id="Quc-5K-VsY"/>
+                                    <constraint firstAttribute="height" constant="110" id="sjg-lg-lwA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" red="0.94369125369999995" green="0.78310650589999997" blue="0.8297409415" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Dictionnaire"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Film">
+                                    <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="40"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="ANT-Sg-qbX" kind="show" id="tTJ-Cn-B2w"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b85-Ag-Idh">
+                                <rect key="frame" x="66.5" y="98" width="281" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="b85-Ag-Idh" secondAttribute="height" multiplier="281:110" id="4kn-XE-dpi"/>
+                                    <constraint firstAttribute="height" constant="110" id="Jx5-B7-WN5"/>
+                                    <constraint firstAttribute="width" constant="281" id="zhs-3Z-3IH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" red="0.79695475100000002" green="0.70694583649999998" blue="0.82026153800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Dictionnaire"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Stats">
+                                    <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="65"/>
+                                </buttonConfiguration>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Screen_Shot_2022-05-25_at_10.44.13_PM-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="Ut7-Xz-aiy">
+                                <rect key="frame" x="79" y="218" width="256" height="254"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="LFa-lF-b12"/>
+                                    <constraint firstAttribute="height" constant="254" id="Vsr-t5-RQ7"/>
+                                    <constraint firstAttribute="width" secondItem="Ut7-Xz-aiy" secondAttribute="height" multiplier="128:127" id="o8R-5c-PTJ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9x-7a-D2b">
+                                <rect key="frame" x="50" y="477" width="314" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="E9x-7a-D2b" secondAttribute="height" multiplier="157:55" id="Cf2-WK-2ea"/>
+                                    <constraint firstAttribute="height" constant="110" id="FH1-Vn-IME"/>
+                                    <constraint firstAttribute="width" constant="314" id="J8m-R8-MLL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" red="0.94369125369999995" green="0.78310650589999997" blue="0.8297409415" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Dictionnaire"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Dictionnaire">
+                                    <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="40"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="pXV-Cq-pb7" kind="show" id="YVG-mC-rpM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OeD-r0-De8"/>
+                        <color key="backgroundColor" red="0.64834845070000002" green="0.42557656760000001" blue="0.62004619839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ut7-Xz-aiy" firstAttribute="top" secondItem="b85-Ag-Idh" secondAttribute="bottom" constant="10" id="2nq-Xa-505"/>
+                            <constraint firstItem="b85-Ag-Idh" firstAttribute="centerX" secondItem="AuP-Mb-cGJ" secondAttribute="centerX" id="E1B-m5-WGX"/>
+                            <constraint firstItem="86j-oW-k8K" firstAttribute="centerX" secondItem="AuP-Mb-cGJ" secondAttribute="centerX" id="EfY-dc-on2"/>
+                            <constraint firstItem="E9x-7a-D2b" firstAttribute="centerX" secondItem="AuP-Mb-cGJ" secondAttribute="centerX" id="IWj-Ul-Ys1"/>
+                            <constraint firstItem="86j-oW-k8K" firstAttribute="top" secondItem="E9x-7a-D2b" secondAttribute="bottom" constant="5" id="KrC-qR-IYc"/>
+                            <constraint firstItem="E9x-7a-D2b" firstAttribute="top" secondItem="Ut7-Xz-aiy" secondAttribute="bottom" constant="5" id="lpa-0c-Keg"/>
+                            <constraint firstItem="b85-Ag-Idh" firstAttribute="top" secondItem="OeD-r0-De8" secondAttribute="top" constant="10" id="mZ1-Sr-bw1"/>
+                            <constraint firstItem="Ut7-Xz-aiy" firstAttribute="centerX" secondItem="AuP-Mb-cGJ" secondAttribute="centerX" id="vqr-3U-yi4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Stats" id="K9Y-RN-Xkh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cg0-cb-ibJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1065.217391304348" y="2404.6875"/>
+        </scene>
+        <!--Stats Film View Controller-->
+        <scene sceneID="pes-Lr-ONq">
+            <objects>
+                <viewController id="ANT-Sg-qbX" customClass="StatsFilmViewController" customModule="Pendu_Labo2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dze-yN-nIC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="gxI-S8-6FC"/>
+                        <color key="backgroundColor" red="0.64834845070000002" green="0.42557656760000001" blue="0.62004619839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GVs-3k-Qql"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nQm-Ma-udC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-123" y="2909"/>
+        </scene>
+        <!--Stats Dic View Controller-->
+        <scene sceneID="gfQ-mP-t1t">
+            <objects>
+                <viewController id="pXV-Cq-pb7" customClass="StatsDicViewController" customModule="Pendu_Labo2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pC7-Lw-nuT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="eZ7-yu-qrx"/>
+                        <color key="backgroundColor" red="0.64834845070000002" green="0.42557656760000001" blue="0.62004619839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zU1-9P-vzd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5R4-xg-kle" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-123" y="2104"/>
+        </scene>
+        <!--Jeu Film View Controller-->
+        <scene sceneID="ATv-U1-yXt">
+            <objects>
+                <viewController id="CwI-P4-YRl" customClass="JeuFilmViewController" customModule="Pendu_Labo2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Gi-Lv-EPV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="VFA-Wq-ptC"/>
+                        <color key="backgroundColor" red="0.53394293790000003" green="0.4389392734" blue="0.63587206600000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qdN-9Q-Q2u"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R9L-he-uzc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-123" y="1288"/>
+        </scene>
+        <!--Jeu Dictionnaire View Controller-->
+        <scene sceneID="mK1-uE-83P">
+            <objects>
+                <viewController id="Lwl-XR-o7o" customClass="JeuDictionnaireViewController" customModule="Pendu_Labo2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YSd-ji-WVZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score 0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b20-xG-kEl">
+                                <rect key="frame" x="147" y="20" width="120" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="D7g-t6-g4U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="WhiteColour"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hangman0" translatesAutoresizingMaskIntoConstraints="NO" id="uS4-xT-s3Q">
+                                <rect key="frame" x="25" y="60" width="364" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="fQH-xc-lGH"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zp0-XA-0ul">
+                                <rect key="frame" x="18" y="363" width="378" height="200"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="zTJ-hh-OuO">
+                                        <rect key="frame" x="0.0" y="0.0" width="378" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbA-r0-OrU">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <state key="normal" title="Q"/>
+                                                <connections>
+                                                    <action selector="letterButtonTapped:" destination="Lwl-XR-o7o" eventType="touchUpInside" id="fTg-MX-nVJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbf-q6-vyL">
+                                                <rect key="frame" x="58" y="0.0" width="30" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <state key="normal" title="W"/>
+                                                <connections>
+                                                    <action selector="letterButtonTapped:" destination="Lwl-XR-o7o" eventType="touchUpInside" id="LuG-fy-i13"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hpq-6p-b8v">
+                                                <rect key="frame" x="116" y="0.0" width="30" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <state key="normal" title="E"/>
+                                                <connections>
+                                                    <action selector="letterButtonTapped:" destination="Lwl-XR-o7o" eventType="touchUpInside" id="XMc-t4-YEt"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUr-zy-Rt9">
+                                                <rect key="frame" x="174" y="0.0" width="30" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <state key="normal" title="R"/>
+                                                <connections>
+                                                    <action selector="letterButtonTapped:" destination="Lwl-XR-o7o" eventType="touchUpInside" id="xHc-H3-Bvm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9o-XP-aPn">
+                                                <rect key="frame" x="232" y="0.0" width="30" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <state key="normal" title="T"/>
+                                                <connections>
+                                                    <action selector="letterButtonTapped:" destination="Lwl-XR-o7o" eventType="touchUpInside" id="rHQ-9B-S1P"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cze-T4-hAB">
+                                                <rect key="frame" x="290" y="0.0" width="30" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <state key="normal" title="Y"/>
+                                                <connections>
+                                                    <action selector="letterButtonTapped:" destination="Lwl-XR-o7o" eventType="touchUpInside" id="fiQ-8Q-aZF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VbL-pz-T8I">
+                                                <rect key="frame" x="348" y="0.0" width="30" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <state key="normal" title="U"/>
+                                                <connections>
+                                                    <action selector="letterButtonTapped:" destination="Lwl-XR-o7o" eventType="touchUpInside" id="m6O-Mp-mJj"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="bvN-tw-DZW">
+                                        <rect key="frame" x="0.0" y="52" width="378" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zwj-Ye-7fu">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <state key="normal" title="I"/>
+                                                <connections>
+                                                    <action selector="letterButtonTapped:" destination="Lwl-XR-o7o" eventType="touchUpInside" id="kdO-Lm-HR6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5r-8j-8FG">
+                                                <rect key="frame" x="58" y="0.0" width="30" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <state key="normal" title="O"/>
+                                                <connections>
+                                                    <action selector="letterButtonTapped:" destination="Lwl-XR-o7o" eventType="touchUpInside" id="ko5-s1-s0x"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSH-s5-2Ha">
+                                                <rect key="frame" x="116" y="0.0" width="30" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <state key="normal" title="P"/>
+                                                <connections>
+                                                    <action selector="letterButtonTapped:" destination="Lwl-XR-o7o" eventType="touchUpInside" id="P18-Hl-rST"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYL-LV-m0Y">
+                                                <rect key="frame" x="174" y="0.0" width="30" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="letterButtonTapped:" destination="Lwl-XR-o7o" eventType="touchUpInside" id="gjs-Ef-tUo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7tg-Y6-6A0">
+                                                <rect key="frame" x="232" y="0.0" width="30" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <state key="normal" title="S"/>
+                                                <connections>
+                                                    <action selector="letterButtonTapped:" destination="Lwl-XR-o7o" eventType="touchUpInside" id="RUM-DH-Xsr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ep2-kJ-MKA">
+                                                <rect key="frame" x="290" y="0.0" width="30" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <state key="normal" title="D"/>
+                                                <connections>
+                                                    <action selector="letterButtonTapped:" destination="Lwl-XR-o7o" eventType="touchUpInside" id="EAW-Y3-EOD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMU-Gd-Psd">
+                                                <rect key="frame" x="348" y="0.0" width="30" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <state key="normal" title="F"/>
+                                                <connections>
+                                                    <action selector="letterButtonTapped:" destination="Lwl-XR-o7o" eventType="touchUpInside" id="afh-xs-HyY"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="nOu-AL-gxV">
+                                        <rect key="frame" x="0.0" y="104" width="378" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUJ-0m-6Ie">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <state key="normal" title="G"/>
+                                                <connections>
+                                                    <action selector="letterButtonTapped:" destination="Lwl-XR-o7o" eventType="touchUpInside" id="LKD-Ft-6zg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTN-eZ-WRp">
+                                                <rect key="frame" x="58" y="0.0" width="30" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <state key="normal" title="H"/>
+                                                <connections>
+                                                    <action selector="letterButtonTapped:" destination="Lwl-XR-o7o" eventType="touchUpInside" id="eVA-jF-HAg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSO-xy-19L">
+                                                <rect key="frame" x="116" y="0.0" width="30" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <state key="normal" title="J"/>
+                                                <connections>
+                                                    <action selector="letterButtonTapped:" destination="Lwl-XR-o7o" eventType="touchUpInside" id="MAo-q4-0n7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lL2-3g-K3L">
+                                                <rect key="frame" x="174" y="0.0" width="30" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <state key="normal" title="K"/>
+                                                <connections>
+                                                    <action selector="letterButtonTapped:" destination="Lwl-XR-o7o" eventType="touchUpInside" id="JNX-OK-YvI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYc-pl-8Jh">
+                                                <rect key="frame" x="232" y="0.0" width="30" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <state key="normal" title="L"/>
+                                                <connections>
+                                                    <action selector="letterButtonTapped:" destination="Lwl-XR-o7o" eventType="touchUpInside" id="Cfd-rI-hjB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQn-or-haZ">
+                                                <rect key="frame" x="290" y="0.0" width="30" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <state key="normal" title="Z"/>
+                                                <connections>
+                                                    <action selector="letterButtonTapped:" destination="Lwl-XR-o7o" eventType="touchUpInside" id="qU0-fg-PEq"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnX-mN-Mtf">
+                                                <rect key="frame" x="348" y="0.0" width="30" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <state key="normal" title="X"/>
+                                                <connections>
+                                                    <action selector="letterButtonTapped:" destination="Lwl-XR-o7o" eventType="touchUpInside" id="vbM-qS-Smh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="Y7h-B8-hwZ">
+                                        <rect key="frame" x="0.0" y="156" width="262" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vv-Mn-WqA">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <state key="normal" title="C"/>
+                                                <connections>
+                                                    <action selector="letterButtonTapped:" destination="Lwl-XR-o7o" eventType="touchUpInside" id="4xM-xd-RGY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k1a-EJ-Kdg">
+                                                <rect key="frame" x="58" y="0.0" width="30" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <state key="normal" title="V"/>
+                                                <connections>
+                                                    <action selector="letterButtonTapped:" destination="Lwl-XR-o7o" eventType="touchUpInside" id="G1t-91-rVS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLT-4z-E4i">
+                                                <rect key="frame" x="116" y="0.0" width="30" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <state key="normal" title="B"/>
+                                                <connections>
+                                                    <action selector="letterButtonTapped:" destination="Lwl-XR-o7o" eventType="touchUpInside" id="Mag-sX-M4o"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqF-zu-eCJ">
+                                                <rect key="frame" x="174" y="0.0" width="30" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <state key="normal" title="N"/>
+                                                <connections>
+                                                    <action selector="letterButtonTapped:" destination="Lwl-XR-o7o" eventType="touchUpInside" id="WbV-s2-vP4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkU-bd-cg0">
+                                                <rect key="frame" x="232" y="0.0" width="30" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <state key="normal" title="M"/>
+                                                <connections>
+                                                    <action selector="letterButtonTapped:" destination="Lwl-XR-o7o" eventType="touchUpInside" id="jnW-Cj-ewf"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_ _ _ _ _ _ _ _ _ _ _ _ _ _ " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYF-nT-E5w">
+                                <rect key="frame" x="63.5" y="290" width="287.5" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="xFi-sI-YW0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" name="WhiteColour"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="        6 essais restants" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0k-wC-2vu">
+                                <rect key="frame" x="10" y="219" width="394" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UbO-fE-oi4"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uS4-xT-s3Q" firstAttribute="leading" secondItem="UbO-fE-oi4" secondAttribute="leading" constant="25" id="2cZ-uk-RdA"/>
+                            <constraint firstItem="VYF-nT-E5w" firstAttribute="top" secondItem="uS4-xT-s3Q" secondAttribute="bottom" constant="50" id="3hh-jw-evh"/>
+                            <constraint firstItem="VYF-nT-E5w" firstAttribute="centerX" secondItem="Zp0-XA-0ul" secondAttribute="centerX" id="6tL-H5-X1t"/>
+                            <constraint firstItem="Zp0-XA-0ul" firstAttribute="top" secondItem="VYF-nT-E5w" secondAttribute="bottom" constant="30" id="GUm-zI-GqC"/>
+                            <constraint firstItem="VYF-nT-E5w" firstAttribute="top" secondItem="U0k-wC-2vu" secondAttribute="bottom" constant="50.5" id="HBL-W7-Fgl"/>
+                            <constraint firstItem="b20-xG-kEl" firstAttribute="centerX" secondItem="YSd-ji-WVZ" secondAttribute="centerX" id="OTg-hn-idg"/>
+                            <constraint firstItem="UbO-fE-oi4" firstAttribute="trailing" secondItem="Zp0-XA-0ul" secondAttribute="trailing" constant="18" id="P4F-ap-6hu"/>
+                            <constraint firstItem="b20-xG-kEl" firstAttribute="leading" secondItem="UbO-fE-oi4" secondAttribute="leading" constant="147" id="U14-I3-rVT"/>
+                            <constraint firstItem="uS4-xT-s3Q" firstAttribute="top" secondItem="b20-xG-kEl" secondAttribute="bottom" constant="15" id="bF4-1N-EIm"/>
+                            <constraint firstItem="Zp0-XA-0ul" firstAttribute="leading" secondItem="UbO-fE-oi4" secondAttribute="leading" constant="18" id="dGQ-Cc-dfh"/>
+                            <constraint firstItem="U0k-wC-2vu" firstAttribute="centerX" secondItem="VYF-nT-E5w" secondAttribute="centerX" id="dGR-lg-9Dd"/>
+                            <constraint firstItem="U0k-wC-2vu" firstAttribute="leading" secondItem="UbO-fE-oi4" secondAttribute="leading" constant="10" id="eh4-wp-GCh"/>
+                            <constraint firstItem="b20-xG-kEl" firstAttribute="top" secondItem="UbO-fE-oi4" secondAttribute="top" constant="20" id="m5l-vW-W8d"/>
+                            <constraint firstItem="b20-xG-kEl" firstAttribute="centerX" secondItem="uS4-xT-s3Q" secondAttribute="centerX" id="xHz-IO-zMI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="lDF-cw-HIz"/>
+                    <connections>
+                        <outlet property="guessRemainingLabel" destination="U0k-wC-2vu" id="0x0-jt-NDu"/>
+                        <outlet property="guessWordLabel" destination="VYF-nT-E5w" id="ybA-ec-1Yh"/>
+                        <outlet property="penduImgView" destination="uS4-xT-s3Q" id="uIw-kH-JhR"/>
+                        <outlet property="scoreLabel" destination="b20-xG-kEl" id="f7P-dd-ukA"/>
+                        <outletCollection property="lettersButtons" destination="wkU-bd-cg0" collectionClass="NSMutableArray" id="hbL-0g-cvN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dNL-AP-Qe9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-123" y="532"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Hangman0" width="256" height="256"/>
+        <image name="Screen_Shot_2022-05-25_at_10.44.13_PM-removebg-preview" width="250.5" height="249"/>
+        <image name="Screen_Shot_2022-05-25_at_9.45.08_PM-removebg-preview" width="177.5" height="198"/>
+        <image name="character.book.closed.fill.th" catalog="system" width="115" height="128"/>
+        <image name="film-removebg-preview" width="250" height="250"/>
+        <image name="film.fill" catalog="system" width="128" height="93"/>
+        <image name="gamecontroller.fill" catalog="system" width="128" height="80"/>
+        <namedColor name="WhiteColour">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
