@@ -41,13 +41,10 @@ class WordService {
                 }
 
                 if let safeData = data {
-                   // let dataString = String(data: safeData, encoding: .utf8)
-                  //  print(dataString!)
                     let myWord = try? JSONDecoder().decode(WordData.self, from: safeData)
                     let randomWord = myWord!.word
                     callback(true, randomWord)
                     
-                  //  print(randomWord!.word)
                 }
             }
         }

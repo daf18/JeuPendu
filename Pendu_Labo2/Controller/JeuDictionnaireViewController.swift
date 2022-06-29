@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import GameKit
+import AVFoundation
+import CoreData
 
 
 class JeuDictionnaireViewController: UIViewController {
@@ -27,6 +30,11 @@ class JeuDictionnaireViewController: UIViewController {
     var hiddenWordArray = [Character]()
     var numberOfLetters = 0
     var letterTapped: Character = "."
+    
+    var state: State = .ongoing
+    enum State {
+        case ongoing, over
+    }
     
     var userTries = 6 {
         didSet {
@@ -51,6 +59,11 @@ class JeuDictionnaireViewController: UIViewController {
             }
         }
     }
+    let jeuId = 1
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    var items: [Joueur]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,7 +109,7 @@ class JeuDictionnaireViewController: UIViewController {
         sender.isEnabled = false
         
         //changing the text color of the letter on the button
-        sender.setTitleColor(UIColor.red, for: UIControl.State.disabled) // sa fac o functie pt refresh?
+        sender.setTitleColor(UIColor(red: 254, green: 247, blue: 165, alpha: 0), for: UIControl.State.disabled)
         findWord(char: letterTapped)
     }
     
@@ -136,7 +149,9 @@ class JeuDictionnaireViewController: UIViewController {
         
         userTries = 6
         penduImgNumber = 0
-        score = 0
+        if(state == .over){
+            score = 0
+        }
         
         guessRemainingLabel.text = "\(userTries) essais restants"
         scoreLabel.text = "Score \(score)"
@@ -144,19 +159,20 @@ class JeuDictionnaireViewController: UIViewController {
         
         newWord()
         resetButtons(buttons: (lettersPressedBtnArray))
-        print(lettersPressedBtnArray as Any)
+        //print(lettersPressedBtnArray as Any)
     }
     
     private func resetButtons(buttons: [UIButton]){
         for btn in buttons {
             btn.isEnabled = true
-            btn.setTitleColor(UIColor.black, for: UIControl.State.normal)
+            btn.setTitleColor(UIColor(red: 74/255, green: 52/255, blue: 138/255, alpha: 1), for: UIControl.State.normal)
         }
     }
     
     private func winingAlert(){
         let alertVC = UIAlertController(title: "🏆", message: "Vouz avez gagné le jeu", preferredStyle: .actionSheet)
         alertVC.addAction(UIAlertAction(title: "Rejouer", style: .default, handler: { action in
+            self.state = .ongoing
             self.resetGame()
         })) //new game
         present(alertVC, animated: true, completion: nil)
@@ -165,13 +181,57 @@ class JeuDictionnaireViewController: UIViewController {
     private func losingAlert(){
         let alertVC = UIAlertController(title: "💥", message: "Désolé! Vouz avez perdu!", preferredStyle: .actionSheet)
         alertVC.addAction(UIAlertAction(title: "Rejouer", style: .default, handler: { action in
-            self.resetGame()
+            self.state = .over
+    
+            var stateLengthDictionaire = 0
+            var fifthStateDictionaire = 0
+            
+            do {
+                let request = Joueur.fetchRequest() as NSFetchRequest<Joueur>
+                
+                //filter jeu as Dictionnaire Pendu
+                let pred = NSPredicate(format: "jeuId == 1")
+                request.predicate=pred
+                
+                //sort data desc by stats
+                let sort = NSSortDescriptor(key: "stats", ascending: false)
+                request.sortDescriptors = [sort]
+                
+                self.items = try self.context.fetch(request)
+                
+                if(self.items?.count ?? 0 >= 5){
+                    stateLengthDictionaire = 5
+                    fifthStateDictionaire = Int(self.items?[4].stats ?? 0)
+                    
+                }else{
+                    stateLengthDictionaire = self.items?.count ?? 0
+                    fifthStateDictionaire = 0
+                }
+            }
+            catch {
+                print("Fetch Joueur Error")
+            }
+            
+            //TODO: Animation not working
+            
+            guard let destinationVC = self.storyboard?.instantiateViewController(withIdentifier: "JoueurViewController") as? JoueurViewController else  {
+                return
+            }
+            destinationVC.score = self.score
+            destinationVC.jeuId = self.jeuId
+            
+            if( self.score > fifthStateDictionaire){
+                self.present(destinationVC, animated: false, completion: nil)
+                self.resetGame()
+            }else{
+                self.resetGame()
+            }
         })) //new game
         present(alertVC, animated: true, completion: nil)
     }
 }// end of class
 
-// returs an array of all indexed where a character appears in the word
+// returs an array of all indexes where a character appears in the word
 extension Collection where Element : Equatable {
     func allIndices(of target:Element) -> [Int] {
         let indices = self.enumerated().reduce(into: [Int]()) {
@@ -180,5 +240,3 @@ extension Collection where Element : Equatable {
         return indices
     }
 }
-
-
